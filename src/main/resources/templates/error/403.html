@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <!-- saved from url=(0052)http://getbootstrap.com/docs/4.0/examples/dashboard/ -->
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
+<!DOCTYPE html>
+<!-- saved from url=(0052)http://getbootstrap.com/docs/4.0/examples/dashboard/ -->
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -9,13 +13,13 @@
 
 		<title>Dashboard Template for Bootstrap</title>
 		<!-- Bootstrap core CSS -->
-		<link href="asserts/css/bootstrap.min.css" th:href="@{/asserts/css/bootstrap.min.css}" rel="stylesheet">
+		<link href="../../static/asserts/css/bootstrap.min.css" th:href="@{/asserts/css/bootstrap.min.css}" rel="stylesheet">
 
 		<!-- Custom styles for this template -->
-		<link href="asserts/css/dashboard.css" th:href="@{/asserts/css/bootstrap.min.css}" rel="stylesheet">
+		<link href="../../static/asserts/css/dashboard.css" th:href="@{/asserts/css/dashboard.css}" rel="stylesheet">
 		<style type="text/css">
 			/* Chart.js */
-			
+
 			@-webkit-keyframes chartjs-render-animation {
 				from {
 					opacity: 0.99
@@ -24,7 +28,7 @@
 					opacity: 1
 				}
 			}
-			
+
 			@keyframes chartjs-render-animation {
 				from {
 					opacity: 0.99
@@ -33,13 +37,14 @@
 					opacity: 1
 				}
 			}
-			
+
 			.chartjs-render-monitor {
 				-webkit-animation: chartjs-render-animation 0.001s;
 				animation: chartjs-render-animation 0.001s;
 			}
 		</style>
 	</head>
+
 
 	<body>
 		<div th:replace="commons/bar::topbar"></div>
@@ -49,7 +54,7 @@
 				<div th:replace="commons/bar::#sidebar(activeUri='list')"></div>
 
 				<main role="main" class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4">
-					<h1>404</h1>
+					<h1>权限不足</h1>
 				</main>
 			</div>
 		</div>
@@ -66,6 +71,7 @@
 		<script>
 			feather.replace()
 		</script>
+
 
 	</body>
 

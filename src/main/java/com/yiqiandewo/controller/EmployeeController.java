@@ -21,7 +21,7 @@ public class EmployeeController {
     @Autowired
     IDepartmentService departmentService;
 
-    @Secured("ROLE_ROOT")  //需要将@EnableGlobalMethodSecurity的属性securedEnabled配置为true
+    @Secured("ROLE_root")  //需要将@EnableGlobalMethodSecurity的属性securedEnabled配置为true //权限名区分大小写
     @GetMapping("/list")
     public String queryAll(Model model) {
         List<Employee> list = employeeService.queryAllDepartment();
@@ -29,7 +29,7 @@ public class EmployeeController {
         return "emp/list";
     }
 
-    @Secured("ROLE_ROOT")
+    @Secured("ROLE_root")
     @GetMapping("/emp/{id}")
     public String toUpdatePage(@PathVariable("id") Integer id, Model model) {
         Employee employee = employeeService.queryById(id);
@@ -43,7 +43,7 @@ public class EmployeeController {
         return "emp/update";
     }
 
-    @Secured("ROLE_ROOT")
+    @Secured("ROLE_root")
     @PutMapping("/emp")
     public String update(Employee employee, Department department) {
         System.out.println(department);
@@ -52,14 +52,14 @@ public class EmployeeController {
         return "redirect:/list";
     }
 
-    @Secured("ROLE_ROOT")
+    @Secured("ROLE_root")
     @DeleteMapping("/emp/{id}")
     public String del(@PathVariable("id") Integer id) {
         employeeService.del(id);
         return "redirect:/list";
     }
 
-    @Secured("ROLE_ROOT")
+    @Secured("ROLE_root")
     @GetMapping("/emp")
     public String toAddPage(Model model) {
         List<Department> departments = departmentService.queryAll();
@@ -67,7 +67,7 @@ public class EmployeeController {
         return "emp/add";
     }
 
-    @Secured("ROLE_ROOT")
+    @Secured("ROLE_root")
     @PostMapping("/emp")
     public String save(Employee employee) {
         employeeService.save(employee);

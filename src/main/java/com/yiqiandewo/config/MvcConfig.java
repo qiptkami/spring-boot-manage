@@ -3,7 +3,6 @@ package com.yiqiandewo.config;
 import com.yiqiandewo.component.MyLocaleResolver;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.context.support.ReloadableResourceBundleMessageSource;
 import org.springframework.web.servlet.LocaleResolver;
 import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
@@ -25,7 +24,6 @@ public class MvcConfig implements WebMvcConfigurer {
         registry.addViewController("/list").setViewName("emp/list");
         registry.addViewController("/add").setViewName("emp/add");
         registry.addViewController("/update").setViewName("emp/update");
-        registry.addViewController("/error").setViewName("404");
     }
 
     @Bean
