@@ -35,9 +35,12 @@ spring:
         enabled: true # Spring Boot 的 META-INF/spring-configuration-metadata.json 配置文件中默认是关闭 Spring 的 hiddenmethod 过滤器的。
         # 这时候需要通Springboot配置文件application.properties 中将 hiddenmethod 过滤器设置为启用即可。
   redis:
-    host: 119.45.192.221  # redis 缓存1
+    host: 119.45.192.221  # redis 缓存
 mybatis:
   mapper-locations: classpath:mybatis/mapper/*.xml
   type-aliases-package: com.yiqiandewo.pojo
   configuration:
     map-underscore-to-camel-case: true
+server:
+  servlet:
+    context-path: /firstDemo # 项目名 ContextPath must start with '/' and not end with '/'
