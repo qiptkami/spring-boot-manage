@@ -6,6 +6,8 @@ import lombok.NoArgsConstructor;
 
 import java.io.Serializable;
 import java.util.List;
+import java.util.concurrent.locks.Lock;
+import java.util.concurrent.locks.ReentrantLock;
 
 @AllArgsConstructor
 @NoArgsConstructor
@@ -13,7 +15,7 @@ import java.util.List;
 public class Department implements Serializable {
     private Integer id;
     private String departmentName;
-
-/*    //一对多
+    /*    //一对多
     private List<Employee> employees;*/
+   
 }
